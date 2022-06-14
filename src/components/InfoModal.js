@@ -12,6 +12,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react';
+import { FaFacebook, FaGithub } from 'react-icons/fa';
 
 const InfoModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -20,7 +21,7 @@ const InfoModal = () => {
       <Button onClick={onOpen}>Information</Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay bg='blackAlpha.300' />
+        <ModalOverlay bg="blackAlpha.300" />
         <ModalContent>
           <ModalHeader>Info about project</ModalHeader>
           <ModalCloseButton />
@@ -34,7 +35,8 @@ const InfoModal = () => {
               >
                 Odin Project{<br></br>}
               </Link>
-              This will be my first React and Chakra UI project{<br></br>}Thank you for playing!
+              This will be my first React and Chakra UI project{<br></br>}Thank
+              you for playing!
             </Text>
           </ModalBody>
 
@@ -42,6 +44,11 @@ const InfoModal = () => {
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
+            <Link href="https://github.com/FrostandIce" isExternal>
+              <Button colorScheme="gray" leftIcon={<FaGithub />}>
+                GitHub
+              </Button>
+            </Link>
           </ModalFooter>
         </ModalContent>
       </Modal>
