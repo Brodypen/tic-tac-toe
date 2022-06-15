@@ -12,7 +12,7 @@ import {
   ModalBody,
   ModalCloseButton,
 } from '@chakra-ui/react';
-import { FaFacebook, FaGithub } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 const InfoModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
