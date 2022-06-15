@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Icon} from '@chakra-ui/react';
 import { FaTimes, FaCircleNotch } from 'react-icons/fa';
-const Square = ({symbol}) => {
+const Square = ({symbol, onClick}) => {
   let BoxIcon;
    if (symbol === 'x') {
      BoxIcon = <Icon as={FaTimes} color='purple.200' minH="100%" minW="80%" />;
@@ -17,6 +17,7 @@ const Square = ({symbol}) => {
       borderStyle="solid"
       borderColor="blue.900"
       borderRadius="sm"
+      onClick={onClick}
     >
      {BoxIcon}
     </Box>
@@ -24,9 +25,6 @@ const Square = ({symbol}) => {
 };
 Square.defaultProps = {
   symbol: ' ',
-};
-Square.propTypes = {
-  symbol: PropTypes.string,
 };
 
 export default Square;
