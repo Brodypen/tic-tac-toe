@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChakraProvider, Box, Flex, theme, Text, Spacer, Button } from '@chakra-ui/react';
+import { ChakraProvider, Box, Flex, theme, Text, Button } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import InfoModal from './components/InfoModal';
 import Board from './components/Board';

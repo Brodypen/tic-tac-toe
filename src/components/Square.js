@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Box, Icon} from '@chakra-ui/react';
 import { FaTimes, FaCircleNotch } from 'react-icons/fa';
 const Square = ({symbol, onClick}) => {
