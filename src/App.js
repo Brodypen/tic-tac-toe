@@ -1,9 +1,12 @@
 import React from 'react';
-import { ChakraProvider, Box, Flex, theme } from '@chakra-ui/react';
+import {extendTheme, ChakraProvider, Box, Flex, theme } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import InfoModal from './components/InfoModal';
 import Board from './components/Board';
 
+const config = {
+  
+}
 function App() {
   return (
     <ChakraProvider theme={theme}>

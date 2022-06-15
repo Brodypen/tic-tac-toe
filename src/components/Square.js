@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Icon } from '@chakra-ui/react';
+import { Box, Icon, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { FaTimes, FaCircleNotch } from 'react-icons/fa';
 const Square = ({symbol}) => {
- 
   let BoxIcon;
    if (symbol === 'x') {
-     BoxIcon = <Icon as={FaTimes} color="white" minH="100%" minW="80%" />;
+     BoxIcon = <Icon as={FaTimes} color='purple.200' minH="100%" minW="80%" />;
    } else if (symbol === 'o') {
-     BoxIcon = <Icon as={FaCircleNotch} color="white" minH="100%" minW="80%" />;
+     BoxIcon = <Icon as={FaCircleNotch} color='yellow.200' minH="100%" minW="80%" />;
    }
 
   return (
