@@ -38,6 +38,9 @@ function App() {
      setBoard(boardCopy);
      setXisNext(!xIsNext);
    };
+   const resetBoard = () => {
+    setBoard(currBoard => currBoard = Array(9).fill(null));
+   }
 
   return (
     <ChakraProvider theme={theme}>
@@ -46,10 +49,10 @@ function App() {
           <ColorModeSwitcher />
           <InfoModal />
         </Flex>
-        <Flex h="80vh" justify="center" align="center" direction="column" gap='1vh'>
+        <Flex h="80vh" justify="center" align="center" direction="column" gap='4vh'>
           <Board squares={board} onClick={handleClick} />
-          <Text fontSize='md'>{winner ? 'The winner is ' + winner.toUpperCase() + '!' : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</Text>
-          {winner ? <Button>Play again?</Button> : ''}
+          <Text fontSize='2xl'>{winner ? 'The winner is ' + winner.toUpperCase() + '!' : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</Text>
+          {winner ? <Button size='lg' onClick={resetBoard}>Play again?</Button> : ''}
         </Flex>
       </Box>
     </ChakraProvider>
