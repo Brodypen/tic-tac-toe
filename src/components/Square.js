@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Icon, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Box, Icon} from '@chakra-ui/react';
 import { FaTimes, FaCircleNotch } from 'react-icons/fa';
 const Square = ({symbol}) => {
   let BoxIcon;
